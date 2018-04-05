@@ -307,10 +307,10 @@ public class ViewTooltip {
 
         private int corner = 30;
 
-        private int paddingTop = 20;
-        private int paddingBottom = 30;
-        private int paddingRight = 30;
-        private int paddingLeft = 30;
+        private int paddingTop = 0;
+        private int paddingBottom = 0;
+        private int paddingRight = 0;
+        private int paddingLeft = 0;
 
         int shadowPadding = 4;
         int shadowWidth = 8;
