@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+ext {
+    COMPILE_SDK = 27
+    TARGET_SDK = 27
+    MIN_SDK = 14
+    sourceCompatibilityVersion = JavaVersion.VERSION_1_7
+    targetCompatibilityVersion = JavaVersion.VERSION_1_7
+
+    supportVersion = "27.0.2"
+    libraryVersion = "1.1.5"
+}
+
+android {
+    compileSdkVersion project.COMPILE_SDK
+
+    defaultConfig {
+        minSdkVersion project.MIN_SDK
+        targetSdkVersion project.TARGET_SDK
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    compileOnly 'com.android.support:appcompat-v7:'+project.supportVersion
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'viewtooltip'
+    orgName = 'florent37'
+
+    publishedGroupId = 'com.github.florent37'
+    libraryName = 'ViewTooltip'
+    artifact = 'viewtooltip'
+
+    libraryDescription = 'ViewTooltip'
+
+    siteUrl = 'https://github.com/florent37/ViewTooltip'
+    gitUrl = 'https://github.com/florent37/ViewTooltip.git'
+
+    libraryVersion = ext.libraryVersion
+
+    developerId = 'florent37'
+    developerName = 'florent37'
+    developerEmail = 'champigny.florent@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
